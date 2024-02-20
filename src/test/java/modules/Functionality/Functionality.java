@@ -48,6 +48,7 @@ public class Functionality extends TestMethod {
         WaitHandler.waitInvisibility(DealerTable.Label.PlaceYourBetsPlease, 150);
         roundId = getRoundId();
         oldBalance = GetHandler.getDouble(DealerTable.Label.BalanceValue);
+        GetHandler.getElements(DealerTable.Button.ChipOptions).get(1).click();
         EventHandler.click(DealerTable.BettingOption.getMainBet(BettingOption.BIG));
     }
 
