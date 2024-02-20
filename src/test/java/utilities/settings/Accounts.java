@@ -28,9 +28,9 @@ public class Accounts {
 
     public static String getMobileUrl() {
         return switch (environment) {
-            case PRODUCTION -> Production.MOBILE_URL;
-            case UAT -> UAT.MOBILE_URL;
-            case STAGING -> Staging.MOBILE_URL;
+            case PRODUCTION -> Production.URL;
+            case UAT -> UAT.URL;
+            case STAGING -> Staging.URL;
         };
     }
 
@@ -55,19 +55,19 @@ public class Accounts {
      ***************************************************************************************************************/
 
     private static class Production {
-        public static final String MOBILE_URL = "https://play.sbobet.com/";
+        public static final String URL = "https://play.sbobet.com/";
         public static final String USERNAME = "idrauto03";
         public static final String PASSWORD = "asdf1234**";
     }
 
     private static class UAT {
-        public static final String MOBILE_URL = "https://play.sbotest.com/";
+        public static final String URL = "https://play.sbotest.com/";
         public static final String USERNAME = "idrauto03";
         public static final String PASSWORD = "asdf1234**";
     }
 
     private static class Staging {
-        public static final String MOBILE_URL = "https://play.sbotry.com/";
+        public static final String URL = "https://play.sbotry.com/";
         public static final String USERNAME = "zirconsmamaag020";
         public static final String PASSWORD = "asdf1234*";
     }
