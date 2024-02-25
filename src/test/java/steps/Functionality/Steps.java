@@ -1,7 +1,6 @@
 package steps.Functionality;
 
 import globals.TestMethod;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import modules.Functionality.*;
@@ -15,7 +14,7 @@ import utilities.handlers.WaitHandler;
 
 public class Steps {
 
-    @And("I Check {string}")
+    @When("I Check {string}")
     public void iCheck(String step) {
         switch (step) {
             case "The Round Result History" -> FuncTest1.checkTheRoundResultHistory();
@@ -25,7 +24,7 @@ public class Steps {
         }
     }
 
-    @And("I Go {string}")
+    @When("I Go {string}")
     public void iGo(String step) {
         switch (step) {
             case "Back To The Game Lobby" -> EventHandler.click(DealerTable.Button.Back, 3);
@@ -62,10 +61,11 @@ public class Steps {
             case "The Popup Confirm Button" -> EventHandler.click(DealerTable.Button.PopUpConfirm, 2);
             case "The Popup Not Now Button" -> PrintHandler.printInfo("Test Case 42 - Click Step Is Included In Verify Step");
             case "The Back Button On Game" -> EventHandler.click(DealerTable.Button.Back, 2);
+            case "The High Table Limits" -> FuncTest35.clickTheHighTableLimits();
         }
     }
 
-    @And("I Wait {string}")
+    @When("I Wait {string}")
     public void iWait(String step) {
         switch (step) {
             case "Until Round Is Over" -> Functionality.waitUntilRoundIsOver();
@@ -78,7 +78,7 @@ public class Steps {
         }
     }
 
-    @And("I Place {string}")
+    @When("I Place {string}")
     public void iPlace(String step) {
         switch (step) {
             case "A Bet On Any Betting Options" -> Functionality.placeABetOnAnyBettingOptions();
@@ -90,7 +90,7 @@ public class Steps {
         }
     }
 
-    @And("I Do {string}")
+    @When("I Do {string}")
     public void iDo(String step) {
         switch (step) {
             case "Remove Any Chips On My Chips" -> FuncTest30.removeAnyChipsOnMyChips();
@@ -98,14 +98,6 @@ public class Steps {
             case "Replace Any Chip On My Chips" -> FuncTest31.replaceAnyChipOnMyChips();
             case "Press And Hold The Undo Button" -> EventHandler.pressAndHold(DealerTable.Button.Undo, 3);
             case "Switch And Join Another Table" -> FuncTest36.switchAndJoinAnotherTable();
-        }
-    }
-
-    @When("I Enter {string}")
-    public void iEnter(String step) {
-        switch (step) {
-            case "The Dealer Table With High Table Limits" -> FuncTest35.enterTheDealerTableWithHighTableLimits();
-            case "" -> System.out.println();
         }
     }
 

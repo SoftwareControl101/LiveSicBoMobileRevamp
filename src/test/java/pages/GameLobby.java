@@ -7,14 +7,6 @@ import utilities.settings.Accounts;
 public class GameLobby {
 
     /***************************************************************************************************************
-     * These are the table component on the Game Lobby Page.
-     ***************************************************************************************************************/
-
-    private static final String tablesPath = Accounts.getEnvironment() == Environment.PRODUCTION ?
-            "//div[contains(@class, 'dealer_btn')]//span[not(contains(text(),'Maintenance'))]/ancestor::div[4]" :
-            "//p[(contains(text(),'Sic Bo Y'))]/ancestor::div[2]";
-
-    /***************************************************************************************************************
      * These are the container components on the Game Lobby Page.
      ***************************************************************************************************************/
 
@@ -23,7 +15,7 @@ public class GameLobby {
                 "List of Dealer Tables",
                 "Container",
                 "Game Lobby Page",
-                tablesPath
+                "//div[@class='dealer station']"
         );
         public static Component DealerPhotos = new Component(
                 "List of Dealer Photos",
@@ -142,12 +134,22 @@ public class GameLobby {
      ***************************************************************************************************************/
 
     public static class Method {
+        public static Component getDealerTables() {
+            return new Component(
+                    "List of Selected Dealer Tables",
+                    "Container",
+                    "Game Lobby Page",
+                    Accounts.getEnvironment() == Environment.PRODUCTION ?
+                            "//div[contains(@class, 'dealer_btn')]//span[not(contains(text(),'Maintenance'))]/ancestor::div[4]" :
+                            "//p[(contains(text(),'Sic Bo Y'))]/ancestor::div[2]"
+            );
+        }
         public static Component getDealerTable(String dealsOrTable) {
             return new Component(
                     dealsOrTable + " Dealer Table",
                     "Container",
                     "Game Lobby Page",
-                    tablesPath + "//p[(contains(text(), '" +
+                    getDealerTables().getPath() + "//p[(contains(text(), '" +
                             dealsOrTable + "'))]/ancestor::div[2]"
             );
         }

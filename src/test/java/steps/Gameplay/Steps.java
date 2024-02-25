@@ -1,7 +1,6 @@
 package steps.Gameplay;
 
 import globals.TestMethod;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import modules.Gameplay.*;
@@ -11,15 +10,16 @@ import utilities.handlers.WaitHandler;
 
 public class Steps {
 
-    @And("Click {string}")
+    @When("Click {string}")
     public void iClick(String step) {
         switch (step) {
             case "On Each Chip" -> PrintHandler.printInfo("Test Case 4 - Click Step Is Included In Verify Step");
             case "The Back Button" -> GameTest19.clickBackButton();
+            case "The High Table Limits" -> GameTest29.clickTheHighTableLimits();
         }
     }
 
-    @And("Place {string}")
+    @When("Place {string}")
     public void iPlace(String step) {
         switch (step) {
             case "A Bet On Each Betting Option" -> PrintHandler.printInfo("Test Case 11 - Place Step Is Included In Verify Step");
@@ -31,7 +31,7 @@ public class Steps {
         }
     }
 
-    @And("Wait {string}")
+    @When("Wait {string}")
     public void iWait(String step) {
         switch (step) {
             case "Until New Round Starts", "Until Bet Wins" -> WaitHandler.waitVisibility(DealerTable.Label.ShowDealing, 150);
@@ -44,14 +44,6 @@ public class Steps {
         switch (step) {
             case "Not Bet For 8 Consecutive Rounds" -> PrintHandler.printInfo("Test Case 14 - Do Step Is Included In Verify Step");
             case "Not Bet For 9 Consecutive Rounds" -> PrintHandler.printInfo("Test Case 15 - Do Step Is Included In Verify Step");
-        }
-    }
-
-    @When("Enter {string}")
-    public void iEnter(String step) {
-        switch (step) {
-            case "The Dealer Table With High Minimum Limit" -> GameTest29.enterTheDealerTableWithHighMinimumLimit();
-            case "" -> System.out.println();
         }
     }
 

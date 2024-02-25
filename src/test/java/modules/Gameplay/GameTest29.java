@@ -13,13 +13,10 @@ import java.util.Objects;
 
 public class GameTest29 extends Gameplay {
 
-    public static void enterTheDealerTableWithHighMinimumLimit() {
+    public static void clickTheHighTableLimits() {
         Component tableLimits = GameLobby.Button.TableLimits;
         List<WebElement> tables = GetHandler.getElements(tableLimits);
         EventHandler.click(tableLimits, tables.get(tables.size() - 1));
-        Component dealerTable = GameLobby.Container.DealerTables;
-        EventHandler.click(dealerTable, GetHandler.getElementByRandom(dealerTable, HandleCollection.WithException));
-        EventHandler.click(DealerTable.Button.SkipWelcome, HandleCollection.WithException);
     }
 
     public static void verify() {

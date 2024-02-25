@@ -1,8 +1,8 @@
 package steps.ResultAndStatistics;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import modules.ResultAndStatistics.*;
 import pages.DealerTable;
 import pages.GameLobby;
@@ -18,13 +18,13 @@ import java.util.List;
 
 public class Steps {
 
-    @And("I Enter The Dealer Table With 300 Rounds")
+    @When("I Enter The Dealer Table With 300 Rounds")
     public void iEnterTheDealerTableWithRounds() {
         EventHandler.click(GameLobby.Method.getDealerTable("Deals 300"));
         EventHandler.click(DealerTable.Button.SkipWelcome, HandleCollection.WithException);
     }
 
-    @And("I Place A Bet Until There Is A Round Result For All Results And Statistics")
+    @When("I Place A Bet Until There Is A Round Result For All Results And Statistics")
     public void iPlaceABetUntilThereIsARoundResultForAllResultsAndStatistics(DataTable dataTable) {
         ResAndStatsWait.waitUntilWins(50, getBatch(dataTable.asList(String.class)));
         FileHandler.TxtFile.write(Variables.getTestResultList(), Constants.Directory.RESULT_AND_STATS_PATH);

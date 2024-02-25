@@ -4,7 +4,6 @@ import globals.BettingOption;
 import org.openqa.selenium.WebElement;
 import pages.DealerTable;
 import pages.GameLobby;
-import utilities.enums.HandleCollection;
 import utilities.handlers.AssertHandler;
 import utilities.handlers.EventHandler;
 import utilities.handlers.GetHandler;
@@ -17,14 +16,10 @@ public class FuncTest35 extends Functionality {
 
     static double oldBet;
 
-    public static void enterTheDealerTableWithHighTableLimits() {
+    public static void clickTheHighTableLimits() {
         Component tableLimits = GameLobby.Button.TableLimits;
         List<WebElement> elements = GetHandler.getElements(tableLimits);
         EventHandler.click(tableLimits, elements.get(elements.size() - 1));
-        Component dealerTables = GameLobby.Container.DealerTables;
-        WebElement dealerTable = GetHandler.getElementByRandom(dealerTables);
-        EventHandler.click(dealerTables, dealerTable);
-        EventHandler.click(DealerTable.Button.SkipWelcome, HandleCollection.WithException);
     }
 
     public static void verify(boolean isCheckConfirm) {

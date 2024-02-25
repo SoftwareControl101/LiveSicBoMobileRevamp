@@ -111,7 +111,8 @@ Feature: Gameplay
 
   @GameplayTest29
   Scenario: GP Test 29: Checking The Behavior Of The Game When Placed Minimum Bet On Any Betting Options
-    When Enter "The Dealer Table With High Minimum Limit"
+    When Click "The High Table Limits"
+    And I Enter The Dealer Table
     And Place "A Bet On Any Betting Options"
     And Wait "Until Timer Less Than Ten Seconds"
     Then Verify "The Behavior Of The Game When Placed Minimum Bet On Any Betting Options"

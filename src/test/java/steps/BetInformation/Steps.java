@@ -1,6 +1,5 @@
 package steps.BetInformation;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import modules.BetInformation.BetInformation;
@@ -25,13 +24,13 @@ public class Steps {
         }
     }
 
-    @And("I Go To My Bets On The Menu")
+    @When("I Go To My Bets On The Menu")
     public void iGoToMyBetsOnTheMenu() {
         EventHandler.click(DealerTable.Button.Menu);
         EventHandler.click(Menu.Button.MyBets);
     }
 
-    @And("I Click Bet Details")
+    @When("I Click Bet Details")
     public void iClickBetDetails() {
         BetInformation.clickBetDetails();
     }
