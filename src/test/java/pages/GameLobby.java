@@ -134,14 +134,15 @@ public class GameLobby {
      ***************************************************************************************************************/
 
     public static class Method {
+        private static final String tablePath = Accounts.getEnvironment() == Environment.PRODUCTION ?
+                        "//div[contains(@class, 'dealer_btn')]//span[not(contains(text(),'Maintenance'))]/ancestor::div[4]" :
+                        "//p[(contains(text(),'Sic Bo Y'))]/ancestor::div[2]";
         public static Component getDealerTables() {
             return new Component(
                     "List of Selected Dealer Tables",
                     "Container",
                     "Game Lobby Page",
-                    Accounts.getEnvironment() == Environment.PRODUCTION ?
-                            "//div[contains(@class, 'dealer_btn')]//span[not(contains(text(),'Maintenance'))]/ancestor::div[4]" :
-                            "//p[(contains(text(),'Sic Bo Y'))]/ancestor::div[2]"
+                    tablePath
             );
         }
         public static Component getDealerTable(String dealsOrTable) {
@@ -149,7 +150,7 @@ public class GameLobby {
                     dealsOrTable + " Dealer Table",
                     "Container",
                     "Game Lobby Page",
-                    getDealerTables().getPath() + "//p[(contains(text(), '" +
+                    tablePath + "//p[(contains(text(), '" +
                             dealsOrTable + "'))]/ancestor::div[2]"
             );
         }

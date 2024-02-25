@@ -31,7 +31,7 @@ Feature: User Interface
     Then I Verify The UI Of Game During Dealing Phase
 
   @UserInterfaceTest6
-  Scenario: UI Test 6: Checking The Mapping Of Live Sic Bo Betting Options
+  Scenario: UI Test 6: Checking The Mapping Of Live Sic Bo Revamp Betting Options
     When I Join Live Sic Bo Revamp
     And I Enter The Dealer Table
     Then I Verify The Mapping Of Betting Options
