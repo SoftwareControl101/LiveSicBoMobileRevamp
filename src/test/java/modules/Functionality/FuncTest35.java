@@ -16,12 +16,6 @@ public class FuncTest35 extends Functionality {
 
     static double oldBet;
 
-    public static void clickTheHighTableLimits() {
-        Component tableLimits = GameLobby.Button.TableLimits;
-        List<WebElement> elements = GetHandler.getElements(tableLimits);
-        EventHandler.click(tableLimits, elements.get(elements.size() - 1));
-    }
-
     public static void verify(boolean isCheckConfirm) {
         if (isCheckConfirm) {
 

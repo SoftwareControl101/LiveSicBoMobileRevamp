@@ -2,13 +2,18 @@ package modules.Functionality;
 
 import globals.BettingOption;
 import globals.TestMethod;
+import org.openqa.selenium.WebElement;
 import pages.DealerTable;
+import pages.GameLobby;
 import pages.Menu;
 import pages.MyBets;
 import utilities.enums.HandleCollection;
 import utilities.handlers.EventHandler;
 import utilities.handlers.GetHandler;
 import utilities.handlers.WaitHandler;
+import utilities.objects.Component;
+
+import java.util.List;
 
 public class Functionality extends TestMethod {
 
@@ -64,6 +69,12 @@ public class Functionality extends TestMethod {
 
     public static void checkThePlacedBet() {
         oldBet = getChipValue(DealerTable.BettingChip.getMainBet(BettingOption.BIG));
+    }
+
+    public static void clickTheHighTableLimits() {
+        Component tableLimits = GameLobby.Button.TableLimits;
+        List<WebElement> elements = GetHandler.getElements(tableLimits);
+        EventHandler.click(tableLimits, elements.get(1));
     }
 
 }

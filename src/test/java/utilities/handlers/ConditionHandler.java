@@ -2,6 +2,7 @@ package utilities.handlers;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.objects.Component;
 import utilities.settings.Variables;
 
@@ -26,6 +27,15 @@ public class ConditionHandler extends Variables {
     @SuppressWarnings("unused")
     public static boolean isDisplayed(Component component) {
         try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(component.getPath()));
+            return element.isDisplayed();
+        } catch (Exception e) { return false; }
+    }
+
+    @SuppressWarnings("unused")
+    public static boolean isDisplayed(Component component, int seconds) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, seconds);
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(component.getPath()));
             return element.isDisplayed();
         } catch (Exception e) { return false; }

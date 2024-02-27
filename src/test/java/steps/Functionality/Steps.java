@@ -1,6 +1,7 @@
 package steps.Functionality;
 
 import globals.TestMethod;
+import io.cucumber.gherkin.Func;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import modules.Functionality.*;
@@ -61,7 +62,7 @@ public class Steps {
             case "The Popup Confirm Button" -> EventHandler.click(DealerTable.Button.PopUpConfirm, 2);
             case "The Popup Not Now Button" -> PrintHandler.printInfo("Test Case 42 - Click Step Is Included In Verify Step");
             case "The Back Button On Game" -> EventHandler.click(DealerTable.Button.Back, 2);
-            case "The High Table Limits" -> FuncTest35.clickTheHighTableLimits();
+            case "The High Table Limits" -> Functionality.clickTheHighTableLimits();
         }
     }
 
