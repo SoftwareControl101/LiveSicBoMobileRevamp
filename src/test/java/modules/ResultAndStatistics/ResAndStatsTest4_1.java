@@ -13,7 +13,7 @@ public class ResAndStatsTest4_1 extends ResAndStats implements ResAndStatsCase {
 
     private static final int testCase = 4, division = 1;
     private double oldBigPercentage = 0.0, expectedBigPercentage = 0.0, actualBigPercentage = 0.0;
-    private static int size;
+    private static int bigSize, smallSize, tripleSize;
 
     public int getTestCase() { return testCase; }
 
@@ -23,8 +23,10 @@ public class ResAndStatsTest4_1 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        size = getSize(Statistics.Container.BigResults);
-        expectedBigPercentage = Math.round(((float) size / totalResultHistory) * 100);
+        bigSize = getSize(Statistics.Container.BigResults);
+        smallSize = getSize(Statistics.Container.SmallResults);
+        tripleSize = getSize(Statistics.Container.TripleResults) / 2;
+        expectedBigPercentage = Math.round((bigSize / totalResultHistory) * 100);
         oldBigPercentage = actualBigPercentage;
         actualBigPercentage = getPercentage(Statistics.Label.BigPercentage);
     }
@@ -39,7 +41,8 @@ public class ResAndStatsTest4_1 extends ResAndStats implements ResAndStatsCase {
         String expectedResult = Double.toString(expectedBigPercentage);
         String actualResult = Double.toString(actualBigPercentage);
 
-        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, (tableInfo + " " + totalResultHistory + " " + size), oldResult);
+        String info = (tableInfo + " B: " + bigSize + " S: " + smallSize + " T: " + tripleSize);
+        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, info, oldResult);
         divisionList = DataTypeHandler.removeFromArray(division, divisionList);
         if (divisionList.length != 0) return;
         testCaseList = DataTypeHandler.removeFromArray(testCase, testCaseList);

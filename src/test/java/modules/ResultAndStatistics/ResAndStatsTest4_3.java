@@ -13,7 +13,7 @@ public class ResAndStatsTest4_3 extends ResAndStats implements ResAndStatsCase {
 
     private static final int testCase = 4, division = 3;
     private double oldSmallPercentage = 0.0, expectedSmallPercentage = 0.0, actualSmallPercentage = 0.0;
-    private static int size;
+    private static int bigSize, smallSize, tripleSize;
 
     public int getTestCase() { return testCase; }
 
@@ -23,8 +23,10 @@ public class ResAndStatsTest4_3 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        size = getSize(Statistics.Container.SmallResults);
-        expectedSmallPercentage = Math.round((size / totalResultHistory) * 100);
+        smallSize = getSize(Statistics.Container.SmallResults);
+        tripleSize = getSize(Statistics.Container.TripleResults) / 2;
+        bigSize = getSize(Statistics.Container.BigResults);
+        expectedSmallPercentage = Math.round((smallSize / totalResultHistory) * 100);
         oldSmallPercentage = actualSmallPercentage;
         actualSmallPercentage = getPercentage(Statistics.Label.SmallPercentage);
     }
@@ -39,7 +41,8 @@ public class ResAndStatsTest4_3 extends ResAndStats implements ResAndStatsCase {
         String expectedResult = Double.toString(expectedSmallPercentage);
         String actualResult = Double.toString(actualSmallPercentage);
 
-        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, (tableInfo + " " + totalResultHistory + " " + size), oldResult);
+        String info = (tableInfo + " B: " + bigSize + " S: " + smallSize + " T: " + tripleSize);
+        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, info, oldResult);
         divisionList = DataTypeHandler.removeFromArray(division, divisionList);
         if (divisionList.length != 0) return;
         testCaseList = DataTypeHandler.removeFromArray(testCase, testCaseList);

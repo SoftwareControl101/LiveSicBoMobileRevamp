@@ -13,7 +13,7 @@ public class ResAndStatsTest4_5 extends ResAndStats implements ResAndStatsCase {
 
     private static final int testCase = 4, division = 5;
     private double oldEvenPercentage = 0.0, expectedEvenPercentage = 0.0, actualEvenPercentage = 0.0;
-    private static int size;
+    private static int oddSize, evenSize, tripleSize;
 
     public int getTestCase() { return testCase; }
 
@@ -23,8 +23,10 @@ public class ResAndStatsTest4_5 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        size = getSize(Statistics.Container.EvenResults);
-        expectedEvenPercentage = Math.round((size / totalResultHistory) * 100);
+        evenSize = getSize(Statistics.Container.EvenResults);
+        oddSize = getSize(Statistics.Container.OddResults);
+        tripleSize = getSize(Statistics.Container.TripleResults) / 2;
+        expectedEvenPercentage = Math.round((evenSize / totalResultHistory) * 100);
         oldEvenPercentage = actualEvenPercentage;
         actualEvenPercentage = getPercentage(Statistics.Label.EvenPercentage);
     }
@@ -39,7 +41,8 @@ public class ResAndStatsTest4_5 extends ResAndStats implements ResAndStatsCase {
         String expectedResult = Double.toString(expectedEvenPercentage);
         String actualResult = Double.toString(actualEvenPercentage);
 
-        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, (tableInfo + " " + totalResultHistory + " " + size), oldResult);
+        String info = (tableInfo + " O: " + oddSize + " E: " + evenSize + " T: " + tripleSize);
+        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, info, oldResult);
         divisionList = DataTypeHandler.removeFromArray(division, divisionList);
         if (divisionList.length != 0) return;
         testCaseList = DataTypeHandler.removeFromArray(testCase, testCaseList);

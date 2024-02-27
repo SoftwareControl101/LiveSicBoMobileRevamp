@@ -14,7 +14,7 @@ public class ResAndStatsTest4_2 extends ResAndStats implements ResAndStatsCase {
     private static final int testCase = 4, division = 2;
     private double oldTripleSBPercentage = 0.0, expectedTriplePercentage = 0.0, actualTripleSBPercentage = 0.0;
     private double oldTripleOEPercentage = 0.0, actualTripleOEPercentage = 0.0;
-    private static int size;
+    private static int bigSize, smallSize, tripleSize;
 
     public int getTestCase() { return testCase; }
 
@@ -24,8 +24,10 @@ public class ResAndStatsTest4_2 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        size = getSize(Statistics.Container.TripleResults);
-        expectedTriplePercentage = Math.round((((double) size / 2) / totalResultHistory) * 100);
+        tripleSize = getSize(Statistics.Container.TripleResults) / 2;
+        bigSize = getSize(Statistics.Container.BigResults);
+        smallSize = getSize(Statistics.Container.SmallResults);
+        expectedTriplePercentage = Math.round((tripleSize / totalResultHistory) * 100);
         oldTripleSBPercentage = actualTripleSBPercentage;
         actualTripleSBPercentage = getPercentage(Statistics.Label.TripleSBPercentage);
         oldTripleOEPercentage = actualTripleOEPercentage;
@@ -42,7 +44,8 @@ public class ResAndStatsTest4_2 extends ResAndStats implements ResAndStatsCase {
         String expectedResult = Double.toString(expectedTriplePercentage);
         String actualResult = actualTripleSBPercentage + "-" + actualTripleOEPercentage;
 
-        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, (tableInfo + " " + totalResultHistory + " " + size), oldResult);
+        String info = (tableInfo + " B: " + bigSize + " S: " + smallSize + " T: " + tripleSize);
+        ResultHandler.setTestResult(testCase, division, currentRoundResult, expectedResult, actualResult, info, oldResult);
         divisionList = DataTypeHandler.removeFromArray(division, divisionList);
         if (divisionList.length != 0) return;
         testCaseList = DataTypeHandler.removeFromArray(testCase, testCaseList);
