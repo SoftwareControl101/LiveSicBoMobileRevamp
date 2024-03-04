@@ -23,10 +23,12 @@ public class ResAndStatsTest4_1 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        bigSize = getSize(Statistics.Container.BigResults);
         smallSize = getSize(Statistics.Container.SmallResults);
+        double smallPercentage = Math.round(((float) smallSize / totalResultHistory) * 100.0);
         tripleSize = getSize(Statistics.Container.TripleResults) / 2;
-        expectedBigPercentage = Math.round((bigSize / totalResultHistory) * 100);
+        double triplePercentage = Math.round(((float) tripleSize / totalResultHistory) * 100.0);
+        bigSize = getSize(Statistics.Container.BigResults);
+        expectedBigPercentage = Math.round(100.0 - (smallPercentage + triplePercentage));
         oldBigPercentage = actualBigPercentage;
         actualBigPercentage = getPercentage(Statistics.Label.BigPercentage);
     }

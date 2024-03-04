@@ -23,10 +23,12 @@ public class ResAndStatsTest4_5 extends ResAndStats implements ResAndStatsCase {
         if (!DataTypeHandler.find(testCase, testCaseList)) return;
         if (!DataTypeHandler.find(division, divisionList)) return;
 
-        evenSize = getSize(Statistics.Container.EvenResults);
         oddSize = getSize(Statistics.Container.OddResults);
+        double oddPercentage = Math.round(((float) oddSize / totalResultHistory) * 100.0);
         tripleSize = getSize(Statistics.Container.TripleResults) / 2;
-        expectedEvenPercentage = Math.round((evenSize / totalResultHistory) * 100);
+        double triplePercentage = Math.round(((float) tripleSize / totalResultHistory) * 100.0);
+        evenSize = getSize(Statistics.Container.EvenResults);
+        expectedEvenPercentage =  Math.round(100.0 - (oddPercentage + triplePercentage));
         oldEvenPercentage = actualEvenPercentage;
         actualEvenPercentage = getPercentage(Statistics.Label.EvenPercentage);
     }
