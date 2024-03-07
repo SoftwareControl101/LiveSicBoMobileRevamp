@@ -1,0 +1,17 @@
+Test Case: 1 , Division: 0 , Round Result: 3 4 6 , Expected Result: 3 4 6 13 B O , Actual Result: 3 4 6 13 B O , Table Information: B9-4#64952652 , Other Information: null
+Test Case: 2 , Division: 0 , Round Result: 1 3 5 , Expected Result: 1 3 5 9 S O , Actual Result: 1 3 5 9 S O , Table Information: B9-4#64952666 , Other Information: null
+Test Case: 3 , Division: 0 , Round Result: 1 1 1 , Expected Result: 1 1 1 3 T T , Actual Result: 1 1 1 3 T T , Table Information: B9-4#64952782 , Other Information: null
+Test Case: 4 , Division: 1 , Round Result: 3 4 6 , Expected Result: 47.0 , Actual Result: 47.0 , Table Information: B9-4#64952652 B: 141 S: 151 T: 8 , Other Information: 46.0
+Test Case: 4 , Division: 2 , Round Result: 1 1 1 , Expected Result: 3.0 , Actual Result: 3.0-3.0 , Table Information: B9-4#64952782 B: 140 S: 151 T: 9 , Other Information: 3.0-3.0
+Test Case: 4 , Division: 3 , Round Result: 1 3 5 , Expected Result: 50.0 , Actual Result: 50.0 , Table Information: B9-4#64952666 B: 141 S: 151 T: 8 , Other Information: 50.0
+Test Case: 4 , Division: 4 , Round Result: 3 4 6 , Expected Result: 51.0 , Actual Result: 51.0 , Table Information: B9-4#64952652 O: 152 E: 140 T: 8 , Other Information: 50.0
+Test Case: 4 , Division: 5 , Round Result: 1 3 6 , Expected Result: 46.0 , Actual Result: 46.0 , Table Information: B9-4#64952680 O: 152 E: 140 T: 8 , Other Information: 46.0
+Test Case: 4 , Division: 6 , Round Result: 1 3 5 , Expected Result: 17.0 , Actual Result: 17.0 , Table Information: B9-4#64952666 300.0 154 , Other Information: 17.0
+Test Case: 4 , Division: 7 , Round Result: 2 4 6 , Expected Result: 18.0 , Actual Result: 18.0 , Table Information: B9-4#64952691 300.0 162 , Other Information: 18.0
+Test Case: 4 , Division: 8 , Round Result: 3 4 6 , Expected Result: 16.0 , Actual Result: 16.0 , Table Information: B9-4#64952652 300.0 145 , Other Information: 16.0
+Test Case: 4 , Division: 9 , Round Result: 3 4 6 , Expected Result: 16.0 , Actual Result: 16.0 , Table Information: B9-4#64952652 300.0 140 , Other Information: 15.0
+Test Case: 4 , Division: 10 , Round Result: 1 3 5 , Expected Result: 17.0 , Actual Result: 17.0 , Table Information: B9-4#64952666 300.0 149 , Other Information: 17.0
+Test Case: 4 , Division: 11 , Round Result: 3 4 6 , Expected Result: 17.0 , Actual Result: 17.0 , Table Information: B9-4#64952652 300.0 150 , Other Information: 17.0
+Test Case: 4 , Division: 12 , Round Result: 1 3 5 , Expected Result: {11-40}{9-39}{10-33}{8-27} , Actual Result: {11-40}{9-39}{10-33}{8-27} , Table Information: B9-4#64952666 , Other Information: {11-40}{9-39}{10-33}{8-27}
+Test Case: 4 , Division: 13 , Round Result: 3 4 6 , Expected Result: {17-216}{4-47}{6-31}{7-23} , Actual Result: {17-216}{4-47}{6-31}{7-23} , Table Information: B9-4#64952652 , Other Information: {17-215}{4-46}{6-30}{7-22}
+Test Case: 4 , Division: 14 , Round Result: 1 2 3 , Expected Result: {17-222}{4-53}{7-29}{16-24} , Actual Result: {17-222}{4-53}{7-29}{16-24} , Table Information: B9-4#64952733 , Other Information: {17-221}{4-52}{6-36}{7-28}
