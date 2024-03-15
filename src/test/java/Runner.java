@@ -25,10 +25,10 @@ import org.junit.runner.RunWith;
                 //tags= "@ResultAndStatistics"
 
                 // ! Full Run
-                //tags = "@Payout or @BetInformation or @Gameplay or @Functionality or @ResultAndStatistics or @UserInterface"
+                tags = "@Payout or @BetInformation or @Gameplay or @Functionality or @ResultAndStatistics or @UserInterface"
 
                 // ! Re Run
-                tags = "@ResultAndStatistics"
+                //tags = "@FunctionalityTest44"
 
                 // ! Maintenance
                 //tags = "@Maintenance"
