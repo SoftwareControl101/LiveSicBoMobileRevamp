@@ -1,17 +1,17 @@
-Test Case: 1 , Division: 0 , Round Result: 2 5 5 , Expected Result: 2 5 5 12 B E , Actual Result: 2 5 5 12 B E , Table Information: A9-5#65152552 , Other Information: null
-Test Case: 2 , Division: 0 , Round Result: 1 3 5 , Expected Result: 1 3 5 9 S O , Actual Result: 1 3 5 9 S O , Table Information: A9-5#65152579 , Other Information: null
-Test Case: 3 , Division: 0 , Round Result: 4 4 4 , Expected Result: 4 4 4 12 T T , Actual Result: 4 4 4 12 T T , Table Information: A9-5#65152741 , Other Information: null
-Test Case: 4 , Division: 1 , Round Result: 2 5 5 , Expected Result: 48.0 , Actual Result: 48.0 , Table Information: A9-5#65152552 B: 146 S: 143 T: 11 , Other Information: 48.0
-Test Case: 4 , Division: 2 , Round Result: 4 4 4 , Expected Result: 4.0 , Actual Result: 4.0-4.0 , Table Information: A9-5#65152741 B: 140 S: 148 T: 12 , Other Information: 4.0-4.0
-Test Case: 4 , Division: 3 , Round Result: 1 3 5 , Expected Result: 48.0 , Actual Result: 48.0 , Table Information: A9-5#65152579 B: 146 S: 143 T: 11 , Other Information: 47.0
-Test Case: 4 , Division: 4 , Round Result: 1 3 5 , Expected Result: 43.0 , Actual Result: 43.0 , Table Information: A9-5#65152579 O: 129 E: 160 T: 11 , Other Information: 43.0
-Test Case: 4 , Division: 5 , Round Result: 2 5 5 , Expected Result: 53.0 , Actual Result: 53.0 , Table Information: A9-5#65152552 O: 130 E: 159 T: 11 , Other Information: 53.0
-Test Case: 4 , Division: 6 , Round Result: 1 3 5 , Expected Result: 15.0 , Actual Result: 15.0 , Table Information: A9-5#65152579 300.0 136 , Other Information: 15.0
-Test Case: 4 , Division: 7 , Round Result: 2 5 5 , Expected Result: 16.0 , Actual Result: 16.0 , Table Information: A9-5#65152552 300.0 140 , Other Information: 15.0
-Test Case: 4 , Division: 8 , Round Result: 3 5 6 , Expected Result: 18.0 , Actual Result: 18.0 , Table Information: A9-5#65152565 300.0 159 , Other Information: 18.0
-Test Case: 4 , Division: 9 , Round Result: 2 3 4 , Expected Result: 16.0 , Actual Result: 16.0 , Table Information: A9-5#65152604 300.0 148 , Other Information: 16.0
-Test Case: 4 , Division: 10 , Round Result: 2 5 5 , Expected Result: 18.0 , Actual Result: 18.0 , Table Information: A9-5#65152552 300.0 163 , Other Information: 18.0
-Test Case: 4 , Division: 11 , Round Result: 3 5 6 , Expected Result: 17.0 , Actual Result: 17.0 , Table Information: A9-5#65152565 300.0 157 , Other Information: 17.0
-Test Case: 4 , Division: 12 , Round Result: 2 5 5 , Expected Result: {9-41}{12-38}{10-36}{8-34} , Actual Result: {9-41}{12-38}{10-36}{8-34} , Table Information: A9-5#65152552 , Other Information: {9-41}{10-37}{12-37}{8-34}
-Test Case: 4 , Division: 13 , Round Result: 2 5 5 , Expected Result: {4-39}{6-33}{7-27}{17-25} , Actual Result: {4-39}{6-33}{7-27}{17-25} , Table Information: A9-5#65152552 , Other Information: {4-38}{6-32}{7-26}{17-24}
-Test Case: 4 , Division: 14 , Round Result: 1 1 5 , Expected Result: {4-44}{6-38}{17-30}{15-29} , Actual Result: {4-44}{6-38}{17-30}{15-29} , Table Information: A9-5#65152614 , Other Information: {4-43}{6-37}{7-31}{17-29}
+Test Case: 1 , Division: 0 , Round Result: 3 5 5 , Expected Result: 3 5 5 13 B O , Actual Result: 3 5 5 13 B O , Table Information: B9-2#65171350 , Other Information: null
+Test Case: 2 , Division: 0 , Round Result: 1 1 6 , Expected Result: 1 1 6 8 S E , Actual Result: 1 1 6 8 S E , Table Information: B9-2#65171391 , Other Information: null
+Test Case: 3 , Division: 0 , Round Result: 6 6 6 , Expected Result: 6 6 6 18 T T , Actual Result: 6 6 6 18 T T , Table Information: B9-2#65171464 , Other Information: null
+Test Case: 4 , Division: 1 , Round Result: 3 5 5 , Expected Result: 56.0 , Actual Result: 56.0 , Table Information: B9-2#65171350 B: 166 S: 127 T: 7 , Other Information: 55.0
+Test Case: 4 , Division: 2 , Round Result: 6 6 6 , Expected Result: 3.0 , Actual Result: 3.0-3.0 , Table Information: B9-2#65171464 B: 165 S: 127 T: 8 , Other Information: 2.0-2.0
+Test Case: 4 , Division: 3 , Round Result: 1 1 6 , Expected Result: 42.0 , Actual Result: 42.0 , Table Information: B9-2#65171391 B: 166 S: 127 T: 7 , Other Information: 42.0
+Test Case: 4 , Division: 4 , Round Result: 3 5 5 , Expected Result: 52.0 , Actual Result: 52.0 , Table Information: B9-2#65171350 O: 157 E: 136 T: 7 , Other Information: 52.0
+Test Case: 4 , Division: 5 , Round Result: 2 5 5 , Expected Result: 46.0 , Actual Result: 46.0 , Table Information: B9-2#65171363 O: 156 E: 137 T: 7 , Other Information: 46.0
+Test Case: 4 , Division: 6 , Round Result: 1 1 6 , Expected Result: 15.0 , Actual Result: 15.0 , Table Information: B9-2#65171391 300.0 135 , Other Information: 15.0
+Test Case: 4 , Division: 7 , Round Result: 2 5 5 , Expected Result: 15.0 , Actual Result: 15.0 , Table Information: B9-2#65171363 300.0 138 , Other Information: 15.0
+Test Case: 4 , Division: 8 , Round Result: 3 5 5 , Expected Result: 15.0 , Actual Result: 15.0 , Table Information: B9-2#65171350 300.0 131 , Other Information: 14.0
+Test Case: 4 , Division: 9 , Round Result: 3 4 6 , Expected Result: 18.0 , Actual Result: 18.0 , Table Information: B9-2#65171378 300.0 164 , Other Information: 18.0
+Test Case: 4 , Division: 10 , Round Result: 3 5 5 , Expected Result: 18.0 , Actual Result: 18.0 , Table Information: B9-2#65171350 300.0 158 , Other Information: 17.0
+Test Case: 4 , Division: 11 , Round Result: 3 4 6 , Expected Result: 20.0 , Actual Result: 20.0 , Table Information: B9-2#65171378 300.0 176 , Other Information: 20.0
+Test Case: 4 , Division: 12 , Round Result: 3 5 5 , Expected Result: {9-42}{11-40}{13-36}{10-35} , Actual Result: {9-42}{11-40}{13-36}{10-35} , Table Information: B9-2#65171350 , Other Information: {9-42}{11-40}{10-36}{13-35}
+Test Case: 4 , Division: 13 , Round Result: 3 5 5 , Expected Result: {4-123}{6-106}{17-104}{9-23} , Actual Result: {4-123}{6-106}{17-104}{9-23} , Table Information: B9-2#65171350 , Other Information: {4-122}{6-105}{17-103}{9-22}
+Test Case: 4 , Division: 14 , Round Result: 1 1 2 , Expected Result: {6-116}{17-114}{9-33}{5-27} , Actual Result: {6-116}{17-114}{9-33}{5-27} , Table Information: B9-2#65171477 , Other Information: {4-132}{6-115}{17-113}{9-32}
