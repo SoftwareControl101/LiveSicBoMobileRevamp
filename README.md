@@ -17,9 +17,7 @@ This is an automated testing script for the Live Sic Bo Mobile Revamp.
 
 ## Versions
 - Version 1.0: Official Version -> Official Live Sic Bo Mobile Revamp Automation
-- Version 1.1: Component Version -> Change Path to Component Object
-- Version 1.2: Navigation Version -> Update Navigation Steps on the Website
-- Version 1.3: Statistics Version -> Update Result and Statistics Module
+- Version 1.1: Statistics Version -> Update Result and Statistics Module, Web Elements, and Navigation Steps
 
 ## Notes
 ** I have completed the initial development of the automated testing scripts for the Live Sic Bo Mobile Revamp.
